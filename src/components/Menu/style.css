@@ -24,7 +24,7 @@
 	box-shadow: 0 0 3px #444;
 }
 /* Menu - Drink */
-.drink {
+/* .drink {
 	width: 20rem;
 }
 
@@ -77,7 +77,7 @@
 
 .order-btn:active {
 	background-color: #e67e51;
-}
+} */
 /* Drink - Layer */
 .layer {
 	display: flex;

@@ -1,4 +1,5 @@
 import './style.css';
+import { Drink } from '../Drink';
 
 export const Menu = () => (
 	<section className="menu">
@@ -9,7 +10,8 @@ export const Menu = () => (
 				obsluhu
 			</p>
 			<div className="drinks-list">
-				<div className="drink">
+				<Drink name="Espresso" image="/cups/espresso.png" />
+				{/* <div className="drink">
 					<div className="drink__product">
 						<div className="drink__cup">
 							<img src="/cups/espresso.png" />
@@ -31,7 +33,7 @@ export const Menu = () => (
 						<input type="hidden" className="order-id" value="0" />
 						<button className="order-btn">Objednat</button>
 					</form>
-				</div>
+				</div> */}
 
 				<div className="drink">
 					<div className="drink__product">
