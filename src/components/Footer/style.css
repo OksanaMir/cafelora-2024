@@ -2,6 +2,8 @@
 footer {
 	padding: 2rem 0;
 	background-color: #301a1a;
+	position: sticky;
+	bottom: 0;
 }
 
 .footer__content {

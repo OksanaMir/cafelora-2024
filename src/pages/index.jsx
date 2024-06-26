@@ -15,7 +15,7 @@ console.log(drinks);
 
 document.querySelector('#root').innerHTML = render(
 	<div id="home" className="page">
-		<Header />
+		<Header showMenu={true} />
 		<main>
 			<Banner />
 			<Menu drinks={drinks} />

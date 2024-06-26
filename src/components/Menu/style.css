@@ -1,6 +1,6 @@
 /* Menu */
 .menu-intro {
-	max-width: 20rem;
+	max-width: 22rem;
 	margin: 0 auto 0 auto;
 	text-align: center;
 }
@@ -17,7 +17,7 @@
 .order-detail {
 	margin: 2rem auto 6rem auto;
 	padding: 1rem 2rem;
-	max-width: 20rem;
+	max-width: 22rem;
 	text-align: center;
 	background-color: #ea946f;
 	border-radius: 5px;
