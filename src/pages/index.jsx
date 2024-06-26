@@ -20,3 +20,8 @@ document.querySelector('#root').innerHTML = render(
 		<Footer />
 	</div>
 );
+const btnElm = document.querySelector('.nav-btn');
+console.log(btnElm);
+const navElm = document.querySelector('.rollout-nav');
+btnElm.addEventListener('click', () => navElm.classList.toggle('nav-closed'));
+navElm.addEventListener('click', () => navElm.classList.add('nav-closed'));
