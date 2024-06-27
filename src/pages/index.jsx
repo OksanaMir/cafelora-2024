@@ -11,7 +11,6 @@ import { Contact } from '../components/Contact';
 const response = await fetch('http://localhost:4000/api/drinks');
 const json = await response.json();
 const drinks = json.data;
-console.log(drinks);
 
 document.querySelector('#root').innerHTML = render(
 	<div id="home" className="page">
@@ -25,19 +24,20 @@ document.querySelector('#root').innerHTML = render(
 		<Footer />
 	</div>
 );
+
 const btnElm = document.querySelector('.nav-btn');
 const navElm = document.querySelector('.rollout-nav');
-const forms = document.querySelectorAll('.drink__controls');
+const drinkControls = document.querySelectorAll('.drink__controls');
 
 btnElm.addEventListener('click', () => navElm.classList.toggle('nav-closed'));
 
 navElm.addEventListener('click', () => navElm.classList.add('nav-closed'));
 
-forms.forEach(f =>
-	f.addEventListener('click', async e => {
+drinkControls.forEach(dControl =>
+	dControl.addEventListener('click', async e => {
 		e.preventDefault();
 
-		const id = f.dataset.id;
+		const id = dControl.dataset.id;
 		const drink = drinks[id];
 		const ordered = drink.ordered;
 		const apiEndpoint = `http://localhost:4000/api/drinks/${id}`;
