@@ -11,14 +11,15 @@ import { Contact } from '../components/Contact';
 // const response = await fetch('http://localhost:4000/api/drinks');
 const response = await fetch('https://drinks-api-alpha.vercel.app/api/drinks');
 //https://drinks-api-alpha.vercel.app/api/drinks
-const json = await response.json();
-const drinks = json.data;
+// const json = await response.json();
+// const drinks = json.data;
+const drinks = await response.json();
+console.log(drinks);
 
 document.querySelector('#root').innerHTML = render(
 	<div id="home" className="page">
 		<Header showMenu={true} />
 		<main>
-			<p>Testing depolyment</p>
 			<Banner />
 			<Menu drinks={drinks} />
 			<Gallery />
@@ -45,7 +46,6 @@ drinkControls.forEach(dControl =>
 		const ordered = drink.ordered;
 		// const apiEndpoint = `http://localhost:4000/api/drinks/${id}`;
 		const apiEndpoint = `https://drinks-api-alpha.vercel.app/api/drinks/${id}`;
-
 		//https://drinks-api-alpha.vercel.app/api/drinks
 
 		const requestBody = [
@@ -68,6 +68,6 @@ drinkControls.forEach(dControl =>
 		const data = await response.json();
 
 		console.log(data);
-		location.reload();
+		window.location.reload();
 	})
 );

@@ -13,9 +13,10 @@ const response = await fetch(
 	'https://drinks-api-alpha.vercel.app/api/drinks?filter=ordered:eq:true&select=id,name,image'
 );
 //https://drinks-api-alpha.vercel.app/api/drinks
-const json = await response.json();
-const order = json.data;
-console.log(order);
+// const json = await response.json();
+// const order = json.data;
+const order = await response.json();
+
 document.querySelector('#root').innerHTML = render(
 	<div className="page">
 		<div className="page">
