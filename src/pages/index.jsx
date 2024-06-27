@@ -18,6 +18,7 @@ document.querySelector('#root').innerHTML = render(
 	<div id="home" className="page">
 		<Header showMenu={true} />
 		<main>
+			<p>Testing depolyment</p>
 			<Banner />
 			<Menu drinks={drinks} />
 			<Gallery />
