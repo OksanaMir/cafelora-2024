@@ -8,12 +8,11 @@ import { Banner } from '../components/Banner';
 import { Menu } from '../components/Menu';
 import { Contact } from '../components/Contact';
 
-// const response = await fetch('http://localhost:4000/api/drinks');
-const response = await fetch('https://drinks-api-alpha.vercel.app/api/drinks');
-//https://drinks-api-alpha.vercel.app/api/drinks
-// const json = await response.json();
-// const drinks = json.data;
-const drinks = await response.json();
+const response = await fetch('http://localhost:4000/api/drinks');
+
+const json = await response.json();
+const drinks = json.data;
+
 console.log(drinks);
 
 document.querySelector('#root').innerHTML = render(
@@ -34,7 +33,6 @@ const navElm = document.querySelector('.rollout-nav');
 const drinkControls = document.querySelectorAll('.drink__controls');
 
 btnElm.addEventListener('click', () => navElm.classList.toggle('nav-closed'));
-
 navElm.addEventListener('click', () => navElm.classList.add('nav-closed'));
 
 drinkControls.forEach(dControl =>
@@ -44,9 +42,7 @@ drinkControls.forEach(dControl =>
 		const id = dControl.dataset.id;
 		const drink = drinks[id];
 		const ordered = drink.ordered;
-		// const apiEndpoint = `http://localhost:4000/api/drinks/${id}`;
-		const apiEndpoint = `https://drinks-api-alpha.vercel.app/api/drinks/${id}`;
-		//https://drinks-api-alpha.vercel.app/api/drinks
+		const apiEndpoint = `http://localhost:4000/api/drinks/${id}`;
 
 		const requestBody = [
 			{
