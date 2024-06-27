@@ -16,7 +16,9 @@ export const Menu = ({ drinks }) => (
 						id={drink.id}
 						name={drink.name}
 						ordered={drink.ordered}
-						image={`http://localhost:4000${drink.image}`}
+						// image={`http://localhost:4000${drink.image}`}
+						image={`https://drinks-api-alpha.vercel.app${drink.image}`}
+						//https://drinks-api-alpha.vercel.app/api/drinks
 						layers={drink.layers}
 					/>
 				))}

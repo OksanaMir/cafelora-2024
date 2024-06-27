@@ -8,7 +8,9 @@ import { Banner } from '../components/Banner';
 import { Menu } from '../components/Menu';
 import { Contact } from '../components/Contact';
 
-const response = await fetch('http://localhost:4000/api/drinks');
+// const response = await fetch('http://localhost:4000/api/drinks');
+const response = await fetch('https://drinks-api-alpha.vercel.app/api/drinks');
+//https://drinks-api-alpha.vercel.app/api/drinks
 const json = await response.json();
 const drinks = json.data;
 
@@ -40,7 +42,10 @@ drinkControls.forEach(dControl =>
 		const id = dControl.dataset.id;
 		const drink = drinks[id];
 		const ordered = drink.ordered;
-		const apiEndpoint = `http://localhost:4000/api/drinks/${id}`;
+		// const apiEndpoint = `http://localhost:4000/api/drinks/${id}`;
+		const apiEndpoint = `https://drinks-api-alpha.vercel.app/api/drinks/${id}`;
+
+		//https://drinks-api-alpha.vercel.app/api/drinks
 
 		const requestBody = [
 			{

@@ -13,7 +13,8 @@ export const Order = ({ items }) => (
 						<OrderItem
 							key={item.id}
 							name={item.name}
-							image={`http://localhost:4000${item.image}`}
+							// image={`http://localhost:4000${item.image}`}
+							image={`https://drinks-api-alpha.vercel.app${item.image}`}
 						/>
 					))}
 				</div>
