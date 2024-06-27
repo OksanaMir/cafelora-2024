@@ -7,9 +7,10 @@ import { Gallery } from '../components/Gallery';
 import { Banner } from '../components/Banner';
 import { Menu } from '../components/Menu';
 import { Contact } from '../components/Contact';
+import { API_URL } from '../../config';
 
-const response = await fetch('http://localhost:4000/api/drinks');
-
+// const response = await fetch('http://localhost:4000/api/drinks');
+const response = await fetch(API_URL);
 const json = await response.json();
 const drinks = json.data;
 
@@ -42,7 +43,8 @@ drinkControls.forEach(dControl =>
 		const id = dControl.dataset.id;
 		const drink = drinks[id];
 		const ordered = drink.ordered;
-		const apiEndpoint = `http://localhost:4000/api/drinks/${id}`;
+		// const apiEndpoint = `{http://localhost:4000/api/drinks}/${id}`;
+		const apiEndpoint = `${API_URL}/${id}`;
 
 		const requestBody = [
 			{

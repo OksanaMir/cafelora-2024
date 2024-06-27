@@ -1,5 +1,6 @@
 import { OrderItem } from '../OrderItem';
 import './style.css';
+import { ASSETS_URL } from '../../../config';
 
 export const Order = ({ items }) => (
 	<main className="order">
@@ -13,7 +14,8 @@ export const Order = ({ items }) => (
 						<OrderItem
 							key={item.id}
 							name={item.name}
-							image={`http://localhost:4000${item.image}`}
+							// image={`http://localhost:4000${item.image}`}
+							image={`${ASSETS_URL}${item.image}`}
 						/>
 					))}
 				</div>

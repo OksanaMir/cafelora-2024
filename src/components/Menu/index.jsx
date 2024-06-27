@@ -1,5 +1,6 @@
 import './style.css';
 import { Drink } from '../Drink';
+import { ASSETS_URL } from '../../../config';
 
 export const Menu = ({ drinks }) => (
 	<section className="menu">
@@ -16,7 +17,8 @@ export const Menu = ({ drinks }) => (
 						id={drink.id}
 						name={drink.name}
 						ordered={drink.ordered}
-						image={`http://localhost:4000${drink.image}`}
+						// image={`http://localhost:4000${drink.image}`}
+						image={`${ASSETS_URL}${drink.image}`}
 						layers={drink.layers}
 					/>
 				))}
