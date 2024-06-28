@@ -38,6 +38,9 @@ node_modules/
 .env
 .env.test
 
+# configuration files
+config.js
+
 # Generated output
 dist
 
